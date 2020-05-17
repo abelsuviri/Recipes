@@ -1,7 +1,8 @@
-package com.abelsuviri.recipes
+package com.abelsuviri.recipes.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.abelsuviri.recipes.R
 
 class MainActivity : AppCompatActivity() {
 
