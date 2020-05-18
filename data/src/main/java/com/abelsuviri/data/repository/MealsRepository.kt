@@ -11,7 +11,7 @@ import com.abelsuviri.data.network.MealService
 class MealsRepository constructor(private val mealService: MealService) {
     suspend fun getMeals(category: String): Result<MealsList> {
         return try {
-            val response = mealService.getMeals(category).await()
+            val response = mealService.getMeals(category)
             Result.Success(response)
         } catch (e: Throwable) {
             Result.Error(e)

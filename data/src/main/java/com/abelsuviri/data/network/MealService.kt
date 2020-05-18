@@ -2,7 +2,6 @@ package com.abelsuviri.data.network
 
 import com.abelsuviri.data.model.CategoriesList
 import com.abelsuviri.data.model.MealsList
-import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -12,10 +11,10 @@ import retrofit2.http.Query
 
 interface MealService {
     @GET("api/json/v1/1/categories.php")
-    suspend fun getCategories(): Deferred<CategoriesList>
+    suspend fun getCategories(): CategoriesList
 
     @GET("api/json/v1/1/filter.php")
     suspend fun getMeals(
         @Query("c") category: String
-    ): Deferred<MealsList>
+    ): MealsList
 }
